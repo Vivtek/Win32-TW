@@ -81,6 +81,11 @@ First, a couple of quick utilities to make things easier.
 
 Returns the running TW window or undef if TW isn't running.
 
+   my $window = Win32::TW::running();
+   
+The return value is actually the (numeric) window handle
+from Windows.
+
 =cut
 
 sub running {
@@ -92,6 +97,11 @@ sub running {
 =head2 closetw(window)
 
 Given a window ID, closes it.
+
+   Win32::TW::closetw($window);
+   
+Sends a "&File|&Exit" menu message to the window.  May work for other
+things than TW, but hey.  Don't do that.
 
 =cut
 
@@ -106,7 +116,8 @@ Sends a menu command to a window that is expected to pop up a child,
 waits for the child, and returns the child's handle.
 
 Note: Assumes that the title for the child is unique - if you expect
-collisions, you're going to get a rude surprise.
+collisions, you're going to get a rude surprise.  TODO: make this
+more resilient.
 
 =cut
 
@@ -125,7 +136,8 @@ Clicks a named button on a window that is expected to pop up a child,
 waits for the child, and returns the child's handle.
 
 Note: Assumes that the title for the child is unique - if you expect
-collisions, you're going to get a rude surprise.
+collisions, you're going to get a rude surprise.  TODO: make this
+more resilient.
 
 =cut
 
