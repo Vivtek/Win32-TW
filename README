@@ -1,0 +1,44 @@
+Win32-TW
+
+TRADOS Workbench is a front-end utility for working with translation memories.
+It is strictly operated from the GUI, so for scripting we need to "remote
+control" the GUI using L<Win32::GuiTest>, truly by far my favorite way of
+controlling GUI-based software under Windows.
+
+Essentially, Win32::TW defines a convenient API for manipulating Workbench
+from Perl.  There are still significant limitations - Workbench will only
+open one TM at a time, for example - but it actually turns out to be
+pretty easy to automate it.  This takes care of it for you.
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Win32::TW
+
+You can also look for information at:
+
+    RT, CPAN's request tracker (report bugs here)
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Win32-TW
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Win32-TW
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Win32-TW
+
+    Search CPAN
+        http://search.cpan.org/dist/Win32-TW/
+
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2012 Michael Roberts
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
