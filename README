@@ -10,6 +10,18 @@ from Perl.  There are still significant limitations - Workbench will only
 open one TM at a time, for example - but it actually turns out to be
 pretty easy to automate it.  This takes care of it for you.
 
+Caveat at the moment: it ain't done.  So it's not CPAN-ready yet.
+
+Caveat overall: there is no unit testing.  TRADOS will only allow each
+installation to work with a maximum of five languages, so I can't assume
+any two languages to be available for unit testing.  This could probably
+be solved by using the installer's "last" TM - but I'll have to figure
+out a general way to start the last TM before I can use that for unit
+testing, and I just can't be bothered at the moment.
+
+Right now, I'm writing test scripts as I go.  It's a sucky way to work,
+but it's quicker and easier to get off the ground with it for the time being.
+
 SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the
